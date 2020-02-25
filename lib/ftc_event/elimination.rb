@@ -38,9 +38,9 @@ module FtcEvent
       when 2, 4, 6
         'Semifinal 2 Match %i' % [(match + 0) / 2]
       when 7
-        'Finals Match 1'
+        'Final Match 1'
       when 9
-        'Finals Match 2'
+        'Final Match 2'
       end
     end
 

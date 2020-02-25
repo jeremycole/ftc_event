@@ -18,12 +18,16 @@ module FtcEvent
       db.execute('SELECT code FROM leagueInfo').map { |row| row['code'] }
     end
 
+    def teams
+      db.execute('SELECT number FROM teams').map { |row| row['number'] }
+    end
+
     def code
       config['code']
     end
 
     def name
-      config['name']
+      config['name'].gsub(/\s*FTC\s*/, '').strip
     end
 
     def short_name
@@ -39,11 +43,21 @@ module FtcEvent
     end
 
     def league(code = leagues.first)
-      League.new(self, code)
+      League.new(self, code) if code
     end
 
     def team(number)
       Team.new(self, number)
+    end
+
+    def each_team
+      return enum_for(:each_team) unless block_given?
+
+      teams.each do |number|
+        yield team(number)
+      end
+
+      nil
     end
 
     def qualifications

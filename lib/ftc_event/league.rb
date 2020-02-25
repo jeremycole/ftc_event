@@ -15,7 +15,7 @@ module FtcEvent
     end
 
     def name
-      info['name']
+      info && info['name']
     end
 
     def teams

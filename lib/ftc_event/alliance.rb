@@ -29,7 +29,7 @@ module FtcEvent
     end
 
     def short_team_list
-      each_team.map(&:number).join(' & ')
+      each_team.map(&:number).join('/')
     end
 
     def long_team_list

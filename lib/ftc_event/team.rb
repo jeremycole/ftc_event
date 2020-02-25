@@ -15,23 +15,23 @@ module FtcEvent
     end
 
     def name
-      info && info['name']
+      info && info['name'].strip
     end
 
     def school
-      info && info['school']
+      info && info['school'].strip
     end
 
     def city
-      info && info['city']
+      info && info['city'].strip
     end
 
     def state
-      info && info['state']
+      info && info['state'].strip
     end
 
     def country
-      info && info['country']
+      info && info['country'].strip
     end
 
     def location
