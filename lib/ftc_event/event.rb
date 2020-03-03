@@ -27,7 +27,7 @@ module FtcEvent
     end
 
     def name
-      config['name'].gsub(/\s*FTC\s*/, '').strip
+      config['name'].gsub(/FIRST Tech Challenge/, 'FTC').strip
     end
 
     def short_name
