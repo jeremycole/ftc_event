@@ -23,11 +23,11 @@ module FtcEvent
     end
 
     def city
-      info && info['city'].strip
+      info && info['city'].strip.split(' ').map(&:capitalize).join(' ')
     end
 
     def state
-      info && info['state'].strip
+      info && info['state'].strip.split(' ').map(&:capitalize).join(' ')
     end
 
     def country
