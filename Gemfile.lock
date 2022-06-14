@@ -41,7 +41,7 @@ GEM
     rubocop-ast (1.11.0)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
-    sqlite3 (1.4.2)
+    sqlite3 (1.4.3)
     unicode-display_width (2.0.0)
 
 PLATFORMS
