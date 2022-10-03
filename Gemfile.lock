@@ -9,6 +9,7 @@ GEM
   specs:
     ast (2.4.2)
     diff-lcs (1.4.4)
+    mini_portile2 (2.8.0)
     parallel (1.20.1)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -41,7 +42,8 @@ GEM
     rubocop-ast (1.11.0)
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
-    sqlite3 (1.4.2)
+    sqlite3 (1.5.2)
+      mini_portile2 (~> 2.8.0)
     unicode-display_width (2.0.0)
 
 PLATFORMS
